@@ -37,19 +37,19 @@ A lightweight, zero-dependency JavaScript utility that displays a full-page over
 ### 1. Download or Clone
 
 ```bash
-git clone https://github.com/yourusername/progressbar-overlay.git
+git clone https://github.com/yourusername/bs-progressbar.git
 ```
 
 ### 2. Include in Your HTML
 
 ```html
-<script src="progressbar.js"></script>
+<script src="bs-bs-progressbar.js"></script>
 ```
 
 Or load via CDN (after tagging a release):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/yourusername/progressbar-overlay@v1.0.0/progressbar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/yourusername/bs-progressbar@v1.0.0/bs-bs-progressbar.js"></script>
 ```
 
 ---
@@ -57,7 +57,7 @@ Or load via CDN (after tagging a release):
 ## 🚀 Quick Start
 
 ```html
-<script src="progressbar.js"></script>
+<script src="bs-bs-progressbar.js"></script>
 <script>
   // Start the overlay progress bar
   window.Progressbar.start(5000, 'Processing...', false, 'bg-primary');
@@ -137,7 +137,7 @@ Progressbar.stop(() => {
 
 ## 🎨 Styling
 
-The progress bar uses dynamic DOM creation. Add this minimal CSS for styling the backdrop and modal. You can expand or modify it to match your app’s design system.
+The progress bar uses dynamic DOM creation. Add this `bs-progressbar.css` file for styling the backdrop and modal. You can expand or modify it to match your app’s design system.
 
 ```css
 .progress-backdrop {
