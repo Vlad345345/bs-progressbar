@@ -53,8 +53,8 @@ git clone https://github.com/yesman93/bs-progressbar.git
 Or load via CDN (after tagging a release):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar@v1.0.0/bs-progressbar.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar@v1.0.0/bs-progressbar.css">
+<script src="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar/bs-progressbar.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar/bs-progressbar.css">
 ```
 
 ---
