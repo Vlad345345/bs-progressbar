@@ -37,7 +37,7 @@ A lightweight, zero-dependency JavaScript utility that displays a full-page over
 ### 1. Download or Clone
 
 ```bash
-git clone https://github.com/yourusername/bs-progressbar.git
+git clone https://github.com/yesman93/bs-progressbar.git
 ```
 
 ### 2. Include in Your HTML
