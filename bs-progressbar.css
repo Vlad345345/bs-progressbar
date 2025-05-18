@@ -1,3 +1,18 @@
+/**
+ * bs-progressbar.css
+ * ------------------
+ *
+ * Styles for the bs-progressbar overlay component.
+ * Compatible with Bootstrap 5+ progress bar layout.
+ *
+ * Author: TB (https://github.com/yesman93)
+ * License: MIT
+ * Version: 1.0.0
+ * Repository: https://github.com/yesman93/bs-progressbar
+ * CDN: https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar@v1.0.0/bs-progressbar.css
+ */
+
+
 @charset "UTF-8";
 
 .progress-backdrop {

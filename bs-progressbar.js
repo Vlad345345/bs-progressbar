@@ -1,4 +1,24 @@
 /**
+ * bs-progressbar.js
+ * -----------------
+ * 
+ * A lightweight, lazy-loaded singleton for rendering a full-page overlay progress bar.
+ * Designed for Bootstrap-based UI workflows and written in vanilla JavaScript.
+ *
+ * Author: TB (https://github.com/yesman93)
+ * License: MIT
+ * Version: 1.0.0
+ * Repository: https://github.com/yesman93/bs-progressbar
+ * CDN: https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar@v1.0.0/bs-progressbar.js
+ * Demo: https://yesman93.github.io/bs-progressbar/
+ *
+ * Released under the MIT License.
+ */
+
+
+
+
+/**
  * Progressbar utility (lazy-loaded singleton)
  *
  * This module provides a progress bar functionality for web applications.
