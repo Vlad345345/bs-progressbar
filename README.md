@@ -4,6 +4,10 @@ A lightweight, zero-dependency JavaScript utility that displays a full-page over
 
 ---
 
+[Demo page](/example/index.html)
+
+---
+
 ## 📦 Features
 
 - ✅ Full-screen overlay to prevent user interaction while loading
