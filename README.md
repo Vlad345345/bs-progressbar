@@ -60,16 +60,16 @@ Or load via CDN (after tagging a release):
 <script src="bs-bs-progressbar.js"></script>
 <script>
   // Start the overlay progress bar
-  window.Progressbar.start(5000, 'Processing...', false, 'bg-primary');
+  Progressbar.start(5000, 'Processing...', false, 'bg-primary');
 
   // Update label after 2 seconds
   setTimeout(() => {
-    window.Progressbar.update_label('Almost done...');
+    Progressbar.update_label('Almost done...');
   }, 2000);
 
   // Stop and remove the progress bar after 4 seconds
   setTimeout(() => {
-    window.Progressbar.stop(() => {
+    Progressbar.stop(() => {
       alert('Complete!');
     });
   }, 4000);
@@ -80,7 +80,7 @@ Or load via CDN (after tagging a release):
 
 ## 📚 API Reference
 
-The `Progressbar` is exposed as a **singleton** on the `window` object. Use `window.Progressbar` to access its methods.
+The `Progressbar` is exposed as a **singleton** on the `window` object. Use `Progressbar` or `window.Progressbar` to access its methods. It can be accessed from e.g. inside of `<iframe>` using `parent.Progressbar`.
 
 ### `Progressbar.start(duration, label, transparent, color)`
 
