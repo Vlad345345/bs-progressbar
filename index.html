@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bs-progressbar Demo</title>
+  <link rel="stylesheet" href="/bs-progressbar.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>bs-progressbar Demo</h1>
+  <p>This button triggers a full-screen overlay progress bar.</p>
+  <button onclick="showProgress()">Start Progress</button>
+
+  <script src="/bs-progressbar.js"></script>
+  <script>
+    function showProgress() {
+      window.Progressbar.start(5000, 'Demo in progress...', false, 'bg-success');
+      setTimeout(() => {
+        window.Progressbar.update_label('Wrapping up...');
+      }, 3000);
+      setTimeout(() => {
+        window.Progressbar.stop(() => alert('Done!'));
+      }, 5200);
+    }
+  </script>
+</body>
+</html>
