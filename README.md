@@ -43,7 +43,7 @@ git clone https://github.com/yesman93/bs-progressbar.git
 ### 2. Include in Your HTML
 
 ```html
-<script src="bs-bs-progressbar.js"></script>
+<script src="bs-progressbar.js"></script>
 ```
 
 Or load via CDN (after tagging a release):
