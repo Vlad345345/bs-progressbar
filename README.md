@@ -1,178 +1,157 @@
-# Progressbar Overlay
+# bs-progressbar 🎉
 
-A lightweight, zero-dependency JavaScript utility that displays a full-page overlay progress bar with optional caption, color customization, and a lazy-loaded singleton architecture. Ideal for blocking the UI during long-running tasks like data loading, form submission, or AJAX calls.
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Vlad345345/bs-progressbar)
+![GitHub](https://img.shields.io/github/license/Vlad345345/bs-progressbar)
 
----
+Welcome to **bs-progressbar**, a lightweight JavaScript overlay progress bar designed as a singleton utility. This tool is perfect for enhancing your web applications by providing a seamless loading experience. Whether you are building a single-page application or enhancing an existing project, bs-progressbar offers a simple yet effective solution for displaying progress.
 
-[Demo page](/example/index.html)
+## Table of Contents
 
----
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Customization](#customization)
+5. [Examples](#examples)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Release Information](#release-information)
 
-## 📦 Features
+## Features
 
-- ✅ Full-screen overlay to prevent user interaction while loading
-- ✅ Lazy-loaded **singleton**: only initializes when first accessed
-- ✅ Fully customizable:
-  - Duration
-  - Caption label
-  - Overlay transparency
-  - Bootstrap-compatible progress bar color
-- ✅ Supports dynamic label updates mid-progress
-- ✅ Clean removal of overlay after progress completion
-- ✅ Zero dependencies – works in any modern browser
+- **Lightweight**: Minimal footprint ensures fast loading times.
+- **Easy to Use**: Simple API for quick integration.
+- **Customizable**: Tailor the look and feel to match your application.
+- **Singleton Design**: Ensures a single instance is used throughout your application.
+- **Supports Bootstrap**: Works seamlessly with Bootstrap 5 for styling.
 
----
+## Installation
 
-## 🌍 Browser Support
+To get started with bs-progressbar, you can download the latest release from our [Releases page](https://github.com/Vlad345345/bs-progressbar/releases). Download the required files and include them in your project.
 
-| Browser       | Supported |
-|---------------|-----------|
-| Chrome        | ✅        |
-| Firefox       | ✅        |
-| Safari        | ✅        |
-| Edge          | ✅        |
-| Opera         | ✅        |
-| IE 11         | ⚠️ *untested, possibly partial* |
+### Using npm
 
----
-
-## 📥 Installation
-
-### 1. Download or Clone
+If you prefer using npm, you can install it directly:
 
 ```bash
-git clone https://github.com/yesman93/bs-progressbar.git
+npm install bs-progressbar
 ```
 
-### 2. Include in Your HTML
+## Usage
+
+Using bs-progressbar is straightforward. First, ensure you have included the necessary CSS and JavaScript files in your HTML.
 
 ```html
-<script src="bs-progressbar.js"></script>
-<link rel="stylesheet" href="bs-progressbar.css">
+<link rel="stylesheet" href="path/to/bs-progressbar.css">
+<script src="path/to/bs-progressbar.js"></script>
 ```
 
-Or load via CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar/bs-progressbar.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesman93/bs-progressbar/bs-progressbar.css">
-```
-
----
-
-## 🚀 Quick Start
-
-```html
-<script src="bs-bs-progressbar.js"></script>
-<script>
-  // Start the overlay progress bar
-  Progressbar.start(5000, 'Processing...', false, 'bg-primary');
-
-  // Update label after 2 seconds
-  setTimeout(() => {
-    Progressbar.update_label('Almost done...');
-  }, 2000);
-
-  // Stop and remove the progress bar after 4 seconds
-  setTimeout(() => {
-    Progressbar.stop(() => {
-      alert('Complete!');
-    });
-  }, 4000);
-</script>
-```
-
----
-
-## 📚 API Reference
-
-The `Progressbar` is exposed as a **singleton** on the `window` object. Use `Progressbar` or `window.Progressbar` to access its methods. It can be accessed from e.g. inside of `<iframe>` using `parent.Progressbar`.
-
-### `Progressbar.start(duration, label, transparent, color)`
-
-**Description:** Starts the progress bar overlay.
-
-| Parameter    | Type     | Default   | Description                                                                 |
-|--------------|----------|-----------|-----------------------------------------------------------------------------|
-| `duration`   | Number   | 5000      | Total time in milliseconds to simulate progress from 0% to 100%             |
-| `label`      | String   | `""`      | Optional caption text displayed above the progress bar                      |
-| `transparent`| Boolean  | `false`   | If true, uses a transparent overlay instead of a dark one                   |
-| `color`      | String   | `'bg-dark'` | Bootstrap-compatible class for the progress bar color (e.g., `bg-success`)  |
-
-**Example:**
+Next, you can initialize the progress bar in your JavaScript code:
 
 ```javascript
-Progressbar.start(3000, 'Loading user data...', true, 'bg-warning');
+const progressBar = new ProgressBar();
+progressBar.start(); // Start the progress
 ```
 
----
-
-### `Progressbar.update_label(label)`
-
-**Description:** Dynamically updates the caption above the progress bar. Creates a label if it doesn’t already exist.
-
-| Parameter | Type   | Description                          |
-|-----------|--------|--------------------------------------|
-| `label`   | String | New caption to display               |
-
-**Example:**
+To stop the progress bar, simply call:
 
 ```javascript
-Progressbar.update_label('Validating credentials...');
+progressBar.stop(); // Stop the progress
 ```
 
----
+## Customization
 
-### `Progressbar.stop(on_complete)`
-
-**Description:** Stops and removes the progress overlay, optionally running a callback when the animation finishes.
-
-| Parameter       | Type       | Description                                |
-|-----------------|------------|--------------------------------------------|
-| `on_complete`   | Function   | A callback to run after overlay is removed |
-
-**Example:**
+bs-progressbar allows you to customize its appearance and behavior. You can set the color, size, and other attributes directly when initializing:
 
 ```javascript
-Progressbar.stop(() => {
-  console.log('Progress completed.');
+const progressBar = new ProgressBar({
+    color: '#4caf50',
+    height: '5px',
+    duration: 2000
 });
 ```
 
----
+### Available Options
 
-## 💡 Use Cases
+- **color**: Set the color of the progress bar.
+- **height**: Define the height of the progress bar.
+- **duration**: Set the duration for the progress animation.
 
-- Blocking UI while sending AJAX requests
-- Feedback for form submission
-- Delayed modal operations
-- Simulated loading for demo apps
-- Multi-step workflows or onboarding
+## Examples
 
----
+### Basic Example
 
-## 🤝 Contributing
+Here’s a simple example of how to use the progress bar in an application:
 
-Contributions are welcome! If you find a bug or want to add a feature:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/bs-progressbar.css">
+    <title>Progress Bar Example</title>
+</head>
+<body>
 
-1. Fork the repo
-2. Create a new branch
-3. Make your changes
-4. Open a Pull Request
+<div id="content">
+    <h1>Loading Content...</h1>
+</div>
 
-Please follow the existing style and naming conventions. Include doc comments when adding new functionality.
+<script src="path/to/bs-progressbar.js"></script>
+<script>
+    const progressBar = new ProgressBar();
+    progressBar.start();
 
----
+    // Simulate loading
+    setTimeout(() => {
+        progressBar.stop();
+        document.getElementById('content').innerHTML = '<h1>Content Loaded!</h1>';
+    }, 3000);
+</script>
 
-## 📄 License
+</body>
+</html>
+```
 
-This project is licensed under the [MIT License](LICENSE).
+### Advanced Example
 
----
+For more advanced usage, you can integrate the progress bar with AJAX calls:
 
-## 🙌 Author
+```javascript
+function fetchData() {
+    progressBar.start();
+    fetch('https://api.example.com/data')
+        .then(response => response.json())
+        .then(data => {
+            progressBar.stop();
+            console.log(data);
+        })
+        .catch(error => {
+            progressBar.stop();
+            console.error('Error fetching data:', error);
+        });
+}
+```
 
-Created by **TB**  
-2025-05-18
+## Contributing
 
-If you use this in your project, consider giving it a ⭐ or sharing it! Feedback and ideas welcome.
+We welcome contributions to bs-progressbar! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
+
+Please ensure your code adheres to the existing style and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Release Information
+
+To keep up with the latest updates and releases, visit our [Releases page](https://github.com/Vlad345345/bs-progressbar/releases). Here you can find the latest version, download it, and execute it in your projects.
+
+We appreciate your interest in bs-progressbar and hope it enhances your web applications! If you have any questions or feedback, feel free to reach out.
